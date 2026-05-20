@@ -1,14 +1,16 @@
 // 1234 Weddings Firebase config
-// Firebase Console → Project settings → General → Your apps → Web app config
+
 const firebaseConfig = {
-  apiKey: "PASTE_FIREBASE_API_KEY_HERE",
-  authDomain: "PASTE_FIREBASE_AUTH_DOMAIN_HERE",
-  projectId: "PASTE_FIREBASE_PROJECT_ID_HERE",
-  storageBucket: "PASTE_FIREBASE_STORAGE_BUCKET_HERE",
-  messagingSenderId: "PASTE_FIREBASE_MESSAGING_SENDER_ID_HERE",
-  appId: "PASTE_FIREBASE_APP_ID_HERE"
+  apiKey: "AIzaSyATFREmnV9p1qEOwJ7AelQPMetoeMupz1k",
+  authDomain: "weddings-galleries.firebaseapp.com",
+  projectId: "weddings-galleries",
+  storageBucket: "weddings-galleries.firebasestorage.app",
+  messagingSenderId: "697553040356",
+  appId: "1:697553040356:web:9ba7efbc4fa52d70c20df1"
 };
+
 firebase.initializeApp(firebaseConfig);
+
 const auth = firebase.auth();
 const db = firebase.firestore();
 const storage = firebase.storage();
