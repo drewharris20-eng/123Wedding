@@ -1,44 +1,23 @@
-# 1234 Weddings Google Drive Manual Gallery
+# 1234 Weddings Two Page Website
 
-This version uses Google Drive for storage and your website for the branded gallery.
+Files:
+- `index.html` homepage
+- `styles.css` shared design
+- `gallery/index.html` gallery page
+- `gallery-data.js` add or edit client galleries
+- `gallery-app.js` gallery functions
 
-No Firebase.
-No billing card.
-No API key.
+Works now:
+- homepage
+- client gallery page
+- banner image
+- clickable photos
+- lightbox
+- likes
+- selections
+- share link
+- download one photo
+- download selected as ZIP
+- download all as ZIP
 
-## How it works
-
-1. Upload photos to Google Drive.
-2. Set the folder or photos to "Anyone with the link, Viewer."
-3. Paste the photo links into `galleries/sarah-jake/config.js`.
-4. Clients open `https://1234weddings.com/galleries/sarah-jake/`.
-
-## Create a new gallery
-
-Copy:
-
-`galleries/sarah-jake`
-
-Rename it:
-
-`galleries/client-name`
-
-Then update:
-
-`galleries/client-name/config.js`
-
-## Download All
-
-Paste your shared Google Drive folder link into:
-
-`downloadAllUrl`
-
-## Direct Google Drive image format
-
-If a Drive image does not display, use:
-
-`https://drive.google.com/uc?export=view&id=FILE_ID`
-
-For downloads:
-
-`https://drive.google.com/uc?export=download&id=FILE_ID`
+Upload these into the root of your 1234weddings GitHub repo. Keep the `gallery` folder as a folder.
