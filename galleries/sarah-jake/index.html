@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Gallery | 1234 Weddings</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="1234 Weddings Photo Gallery" />
+  <meta property="og:description" content="View and share wedding photos. Book your wedding today at 1234weddings.com." />
+  <link rel="stylesheet" href="/delivery.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="/">1234 Weddings</a>
+      <div class="actions">
+        <button class="btn secondary" id="copyLink">Copy Link</button>
+        <button class="btn facebook" id="shareGalleryFacebook">Share on Facebook</button>
+        <button class="btn secondary" id="downloadSelected" disabled>Download Selected</button>
+        <button class="btn" id="downloadAll">Download All</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="gallery-hero" id="galleryHero">
+    <div class="wrap">
+      <p class="eyebrow">Private wedding gallery</p>
+      <h1 id="galleryTitle">Wedding Gallery</h1>
+      <p class="gallery-subhead">Preview the gallery, select the images you want, download your favorites, or share the gallery with family.</p>
+      <div class="gallery-meta">
+        <span id="galleryDate"></span>
+        <span id="galleryLocation"></span>
+        <span id="photoCount"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="toolbar">
+    <div class="wrap toolbar-inner">
+      <strong class="selection-pill" id="selectionCount">0 selected</strong>
+      <span>Click Select on any photo, then download your selected images.</span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <div class="photo-grid" id="photoGrid"></div>
+    <div class="notice">This gallery is powered by Google Drive links, but clients stay on 1234weddings.com.</div>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo">✕</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImage" src="" alt="Expanded wedding photo" />
+      <div class="lightbox-actions">
+        <a class="btn" id="lightboxDownload" href="#" target="_blank" rel="noopener">Download This Photo</a>
+        <button class="btn facebook" id="lightboxShare">Share Gallery on Facebook</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="/gallery-manual.js"></script>
+</body>
+</html>
