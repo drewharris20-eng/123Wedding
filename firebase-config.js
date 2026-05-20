@@ -1,16 +1,5 @@
-// 1234 Weddings Firebase config
+const SUPABASE_URL = "YOUR_SUPABASE_URL";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyATFREmnV9p1qEOwJ7AelQPMetoeMupz1k",
-  authDomain: "weddings-galleries.firebaseapp.com",
-  projectId: "weddings-galleries",
-  storageBucket: "weddings-galleries.firebasestorage.app",
-  messagingSenderId: "697553040356",
-  appId: "1:697553040356:web:9ba7efbc4fa52d70c20df1"
-};
+const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
 
-firebase.initializeApp(firebaseConfig);
-
-const auth = firebase.auth();
-const db = firebase.firestore();
-const storage = firebase.storage();
+const BUCKET_NAME = "wedding-galleries";
