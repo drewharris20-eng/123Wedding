@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /galleries/{slug} {
+      allow read: if resource.data.isPublic == true || request.auth != null;
+      allow create, update, delete: if request.auth != null && request.auth.uid == request.resource.data.ownerId;
+      match /photos/{photoId} {
+        allow read: if get(/databases/$(database)/documents/galleries/$(slug)).data.isPublic == true || request.auth != null;
+        allow create, update, delete: if request.auth != null;
+      }
+    }
+  }
+}

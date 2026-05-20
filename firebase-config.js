@@ -1,0 +1,14 @@
+// 1234 Weddings Firebase config
+// Firebase Console → Project settings → General → Your apps → Web app config
+const firebaseConfig = {
+  apiKey: "PASTE_FIREBASE_API_KEY_HERE",
+  authDomain: "PASTE_FIREBASE_AUTH_DOMAIN_HERE",
+  projectId: "PASTE_FIREBASE_PROJECT_ID_HERE",
+  storageBucket: "PASTE_FIREBASE_STORAGE_BUCKET_HERE",
+  messagingSenderId: "PASTE_FIREBASE_MESSAGING_SENDER_ID_HERE",
+  appId: "PASTE_FIREBASE_APP_ID_HERE"
+};
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const db = firebase.firestore();
+const storage = firebase.storage();
