@@ -3,36 +3,287 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1234 Weddings | Chicago Wedding Photography + Films</title>
-  <meta name="description" content="Chicago wedding photography and wedding films for couples who want clean, natural coverage, private galleries, selections, favorites, and easy downloads." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>1234 Weddings | Chicago Wedding Videography & Photography</title>
+  <meta name="description" content="Cinematic wedding video coverage and wedding photography for Chicago couples. Simple packages, real moments, clean editing, and full-day storytelling." />
+  <meta name="keywords" content="Chicago wedding videographer, Chicago wedding video coverage, Chicago wedding photographer, wedding videography Chicago, wedding films Chicago, 1234 Weddings" />
+  <link rel="canonical" href="https://1234weddings.com/" />
+
+  <meta property="og:title" content="1234 Weddings | Chicago Wedding Videography & Photography" />
+  <meta property="og:description" content="Cinematic wedding video coverage and wedding photography for Chicago couples. Real moments, clean edits, and simple pricing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://1234weddings.com/" />
+  <meta property="og:image" content="https://1234weddings.com/images/wedding-banner.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="1234 Weddings | Chicago Wedding Videography & Photography" />
+  <meta name="twitter:description" content="Chicago wedding video coverage and photography built around real moments and clean cinematic storytelling." />
+  <meta name="twitter:image" content="https://1234weddings.com/images/wedding-banner.jpg" />
+
+  <style>
+    :root {
+      --bg: #080808;
+      --bg2: #111;
+      --card: rgba(255,255,255,.07);
+      --text: #f8f4ef;
+      --muted: #b9b0a7;
+      --gold: #d6b36a;
+      --rose: #b96a5a;
+      --red: #6f1111;
+      --line: rgba(255,255,255,.16);
+      --shadow: 0 30px 90px rgba(0,0,0,.55);
+      --radius: 26px;
+      --max: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 80% 10%, rgba(185,106,90,.28), transparent 36%), radial-gradient(circle at 10% 0%, rgba(214,179,106,.16), transparent 32%), linear-gradient(180deg, #050505 0%, #101010 48%, #050505 100%);
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 50; background: rgba(7,7,7,.74); backdrop-filter: blur(18px); border-bottom: 1px solid rgba(255,255,255,.09); }
+    .nav-inner { max-width: var(--max); margin: 0 auto; padding: 18px 22px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo { display: flex; flex-direction: column; letter-spacing: .08em; text-transform: uppercase; font-weight: 900; line-height: 1; }
+    .logo span:first-child { font-size: 1.06rem; }
+    .logo span:last-child { font-size: .68rem; color: var(--gold); margin-top: 5px; letter-spacing: .22em; }
+    .nav-links { display: flex; align-items: center; gap: 18px; color: rgba(255,255,255,.78); font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; }
+    .nav-links a:hover { color: white; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 13px 18px; border-radius: 999px; background: var(--text); color: #090909; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; font-size: .78rem; border: 1px solid rgba(255,255,255,.3); box-shadow: 0 16px 40px rgba(0,0,0,.28); transition: transform .2s ease; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.alt { background: transparent; color: var(--text); border: 1px solid var(--line); }
+    .btn.gold { background: linear-gradient(135deg, var(--gold), #fff0bf); color: #12100b; }
+    .hero { min-height: 100vh; position: relative; display: grid; align-items: end; overflow: hidden; padding: 150px 22px 70px; isolation: isolate; }
+    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.84) 0%, rgba(0,0,0,.56) 42%, rgba(111,17,17,.54) 100%), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85') center/cover; z-index: -2; transform: scale(1.03); }
+    .hero::after { content: ""; position: absolute; inset: auto 0 0 0; height: 38%; background: linear-gradient(0deg, #080808, transparent); z-index: -1; }
+    .hero-inner { width: 100%; max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.16fr .84fr; gap: 34px; align-items: end; }
+    .eyebrow { display: inline-flex; width: fit-content; margin-bottom: 18px; padding: 8px 12px; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; color: #f7e4b5; background: rgba(0,0,0,.32); font-size: .74rem; text-transform: uppercase; letter-spacing: .18em; font-weight: 800; }
+    h1, h2, h3 { margin: 0; line-height: .95; letter-spacing: -.06em; }
+    h1 { max-width: 900px; font-size: clamp(3.8rem, 9vw, 9.4rem); text-transform: uppercase; font-weight: 950; }
+    .hero p { max-width: 670px; margin: 24px 0 0; color: rgba(255,255,255,.78); font-size: clamp(1.05rem, 1.7vw, 1.28rem); }
+    .hero-actions { display: flex; gap: 13px; flex-wrap: wrap; margin-top: 30px; }
+    .hero-card { padding: 26px; border-radius: var(--radius); background: rgba(10,10,10,.58); border: 1px solid rgba(255,255,255,.16); box-shadow: var(--shadow); backdrop-filter: blur(18px); }
+    .hero-card strong { display: block; font-size: 2rem; line-height: 1; letter-spacing: -.04em; margin-bottom: 12px; }
+    .hero-card p { margin: 0; font-size: .98rem; }
+    section { padding: 86px 22px; }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    .section-head { display: grid; grid-template-columns: .8fr 1fr; gap: 28px; align-items: end; margin-bottom: 34px; }
+    .kicker { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: .76rem; font-weight: 900; margin-bottom: 13px; }
+    h2 { font-size: clamp(2.6rem, 5.7vw, 5.9rem); text-transform: uppercase; }
+    .lead { color: var(--muted); font-size: 1.08rem; margin: 0; max-width: 720px; }
+    .grid { display: grid; gap: 18px; }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+    .card { padding: 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0,0,0,.18); }
+    .card h3 { font-size: 1.55rem; letter-spacing: -.04em; line-height: 1.05; margin-bottom: 12px; }
+    .card p, .card li { color: var(--muted); }
+    .card ul { margin: 18px 0 0; padding-left: 18px; }
+    .feature { min-height: 520px; border-radius: 34px; overflow: hidden; position: relative; background: linear-gradient(90deg, rgba(0,0,0,.86), rgba(0,0,0,.18)), url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=2000&q=85') center/cover; border: 1px solid var(--line); display: flex; align-items: end; padding: 34px; box-shadow: var(--shadow); }
+    .feature-content { max-width: 650px; }
+    .feature-content h2 { font-size: clamp(3rem, 6vw, 6.4rem); }
+    .feature-content p { color: rgba(255,255,255,.76); font-size: 1.12rem; }
+    .price.featured { background: linear-gradient(160deg, rgba(214,179,106,.24), rgba(255,255,255,.08)); border-color: rgba(214,179,106,.42); }
+    .price .tag { display: inline-flex; padding: 7px 10px; border-radius: 999px; background: rgba(214,179,106,.16); color: #ffe5a0; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 900; margin-bottom: 16px; }
+    .amount { font-size: 3rem; font-weight: 950; letter-spacing: -.07em; margin: 12px 0; }
+    .small { color: var(--muted); font-size: .94rem; }
+    .gallery { display: grid; grid-template-columns: 1.2fr .8fr 1fr; gap: 16px; }
+    .shot { min-height: 340px; border-radius: 28px; overflow: hidden; background-size: cover; background-position: center; border: 1px solid var(--line); box-shadow: 0 20px 70px rgba(0,0,0,.3); }
+    .shot.tall { min-height: 520px; }
+    .faq details { border: 1px solid var(--line); border-radius: 20px; padding: 20px 22px; background: rgba(255,255,255,.06); margin-bottom: 12px; }
+    .faq summary { cursor: pointer; font-weight: 900; font-size: 1.05rem; list-style: none; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq p { color: var(--muted); margin-bottom: 0; }
+    .contact { border-radius: 38px; padding: 42px; background: linear-gradient(135deg, rgba(111,17,17,.72), rgba(0,0,0,.55)), url('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1900&q=85') center/cover; border: 1px solid rgba(255,255,255,.18); box-shadow: var(--shadow); }
+    form { display: grid; gap: 13px; margin-top: 24px; }
+    input, textarea, select { width: 100%; padding: 15px 16px; border-radius: 16px; border: 1px solid rgba(255,255,255,.18); background: rgba(0,0,0,.5); color: white; font: inherit; outline: none; }
+    textarea { min-height: 130px; resize: vertical; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .contact-toggle { position: fixed; right: 18px; bottom: 18px; z-index: 80; }
+    .contact-toggle button { border: 0; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 18px; border-radius: 999px; background: linear-gradient(135deg, #d6b36a, #fff0bf); color: #12100b; font-weight: 950; letter-spacing: .04em; text-transform: uppercase; box-shadow: 0 18px 50px rgba(0,0,0,.42); }
+    .contact-popover { position: fixed; right: 18px; bottom: 78px; z-index: 79; width: min(360px, calc(100vw - 36px)); padding: 22px; border-radius: 24px; background: rgba(8,8,8,.92); border: 1px solid rgba(255,255,255,.16); box-shadow: 0 30px 90px rgba(0,0,0,.65); backdrop-filter: blur(18px); display: none; }
+    .contact-popover.is-open { display: block; }
+    .contact-popover h3 { font-size: 1.6rem; margin-bottom: 10px; }
+    .contact-popover p { color: #b9b0a7; margin-top: 0; }
+    .contact-actions { display: grid; gap: 10px; margin-top: 16px; }
+    .contact-actions a { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 13px 14px; border-radius: 16px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); font-weight: 850; }
+    .contact-actions a span { color: #d6b36a; font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; }
+    footer { padding: 42px 22px; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    @media (max-width: 900px) { .nav-links a:not(.btn) { display: none; } .hero-inner, .section-head, .grid.three, .gallery { grid-template-columns: 1fr; } .hero { padding-top: 125px; } .hero-card { margin-top: 8px; } .feature { min-height: 440px; } .form-grid { grid-template-columns: 1fr; } section { padding: 66px 18px; } }
+    @media (max-width: 540px) { .nav-inner { padding: 14px 16px; } .btn { width: 100%; } .nav .btn { width: auto; padding: 11px 13px; font-size: .7rem; } .hero-actions { flex-direction: column; } .contact { padding: 26px; border-radius: 26px; } .shot, .shot.tall { min-height: 300px; } .contact-actions a { flex-direction: column; align-items: flex-start; } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://1234weddings.com/#business",
+        "name": "1234 Weddings",
+        "url": "https://1234weddings.com/",
+        "image": "https://1234weddings.com/images/wedding-banner.jpg",
+        "description": "Chicago wedding video coverage and wedding photography for couples who want real moments, clean editing, and cinematic storytelling.",
+        "telephone": "+1-417-569-9708",
+        "email": "info@dhpixels.com",
+        "areaServed": ["Chicago", "Chicagoland", "Northwest Side Chicago", "Oak Park", "Evanston", "Skokie", "Naperville", "Winnetka", "Lincoln Park", "Logan Square", "West Loop", "Wicker Park"],
+        "address": { "@type": "PostalAddress", "addressLocality": "Chicago", "addressRegion": "IL", "addressCountry": "US" },
+        "priceRange": "$1,800-$5,500",
+        "sameAs": ["https://www.instagram.com/dhpixels_chicago/"]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://1234weddings.com/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "Do you offer wedding video coverage?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. 1234 Weddings offers wedding video coverage, highlight films, ceremony edits, speeches edits, and combined photo and video coverage for Chicago weddings." } },
+          { "@type": "Question", "name": "How much does wedding video coverage cost?", "acceptedAnswer": { "@type": "Answer", "text": "Most 1234 Weddings video coverage packages range from $1,800 to $5,500 depending on hours, deliverables, location, and whether you need photo, video, or both." } },
+          { "@type": "Question", "name": "Do you travel outside Chicago?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. 1234 Weddings serves Chicago, the surrounding suburbs, and destination weddings when travel is available." } },
+          { "@type": "Question", "name": "How do we book a wedding date?", "acceptedAnswer": { "@type": "Answer", "text": "Send your wedding date, venue, estimated coverage needs, and whether you want photography, videography, or both. A signed agreement and retainer secures the date." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="/">1234<span>Weddings</span></a>
-    <nav class="nav">
-      <a href="#packages">Packages</a><a href="#gallery-preview">Gallery</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="nav-pill" href="gallery/">Client Gallery</a>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Chicago wedding photography + films</p>
-        <h1>Wedding coverage that feels clean, calm, and real.</h1>
-        <p class="lead">Photo and video for couples who want the day captured naturally, with timeless color, beautiful portraits, and a gallery that is easy to view, select, share, and download.</p>
-        <div class="actions"><a class="button" href="#contact">Check Your Date</a><a class="button secondary" href="gallery/">View Client Gallery</a></div>
-        <div class="mini-proof"><span>Chicago</span><span>North Shore</span><span>Suburbs</span><span>Photo + Video</span></div>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="logo" href="#top" aria-label="1234 Weddings home">
+        <span>1234 Weddings</span>
+        <span>Photo + Film</span>
+      </a>
+      <div class="nav-links">
+        <a href="#work">Style</a>
+        <a href="/weddings/sample-couple/">Wedding Gallery</a>
+        <a href="#packages">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn gold">Check Date</a>
       </div>
-      <div class="hero-photo"><div class="hero-card"><strong>Private galleries included.</strong><span>Couples can favorite, select, share, and download their images.</span></div></div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Chicago Wedding Video Coverage + Photography</div>
+        <h1>Real Wedding Stories. Clean, Cinematic, Timeless.</h1>
+        <p>1234 Weddings is built for couples who want the day captured honestly, beautifully, and without turning the whole wedding into a stiff photo shoot.</p>
+        <div class="hero-actions">
+          <a class="btn gold" href="#contact">Check Your Wedding Date</a>
+          <a class="btn alt" href="#packages">View Video Pricing</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <strong>Video. Photo. Story.</strong>
+        <p>Wedding coverage for Chicago couples who want real emotion, strong portraits, clean audio, documentary moments, and a final film that feels like the day actually felt.</p>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">The Style</div>
+            <h2>Not corny. Not fake. Just the real day.</h2>
+          </div>
+          <p class="lead">We shoot weddings with a documentary eye and a commercial polish. That means the candids feel alive, the portraits feel clean, and the film feels like something you would actually want to watch years from now.</p>
+        </div>
+        <div class="grid three">
+          <article class="card"><h3>Documentary Coverage</h3><p>Real moments, family energy, nerves, laughs, vows, speeches, dancing, and everything in between.</p></article>
+          <article class="card"><h3>Cinematic Wedding Films</h3><p>Clean visuals, natural audio, music-driven pacing, and highlight films that feel emotional without feeling cheesy.</p></article>
+          <article class="card"><h3>Editorial Portraits</h3><p>Guided when needed, relaxed when it matters. Strong couple portraits without making the whole day feel staged.</p></article>
+        </div>
+      </div>
     </section>
-    <section class="intro"><div class="section-inner"><div class="section-head"><h2>Simple wedding coverage without making the day feel staged.</h2><p>Some moments need direction. Most moments just need someone paying attention. We keep things moving, find good light, and capture the parts that actually feel like your day.</p></div><div class="cards"><article class="card"><span class="card-number">01</span><h3>Photography</h3><p>Clean coverage of the ceremony, portraits, family photos, reception moments, details, and the little reactions in between.</p></article><article class="card"><span class="card-number">02</span><h3>Films</h3><p>Wedding highlight films, ceremony edits, vows, speeches, and reception coverage with clean audio and natural pacing.</p></article><article class="card"><span class="card-number">03</span><h3>Gallery Delivery</h3><p>Private client galleries with clickable photos, selections, likes, sharing, selected downloads, and download-all options.</p></article></div></div></section>
-    <section id="gallery-preview" class="gallery-preview"><div class="section-inner"><div class="section-head light"><h2>A gallery experience couples can actually use.</h2><p>Each gallery can have a headline image, a clean photo grid, fullscreen viewing, favorites, selections, and download tools.</p></div><div class="editorial-grid"><div class="editorial-photo photo-one"></div><div class="editorial-stack"><div class="editorial-photo photo-two"></div><div class="editorial-photo photo-three"></div></div></div><div class="gallery-callout"><div><p class="eyebrow">Client delivery</p><h3>View, favorite, select, share, and download.</h3><p>Use this as the public client gallery page. Each project can have its own gallery name in the dropdown.</p></div><a class="button light-button" href="gallery/">Open Gallery Page</a></div></div></section>
-    <section id="packages"><div class="section-inner"><div class="section-head"><h2>Photo packages.</h2><p>Simple wedding photography packages built around coverage time, final galleries, and the kind of day you are planning.</p></div><div class="packages"><article class="package"><p class="tag">Simple</p><h3>Essentials Photo</h3><div class="price">$1,200 <span>starting at</span></div><ul><li>Up to 4 hours coverage</li><li>Ceremony and portraits</li><li>Edited high-resolution gallery</li><li>Online delivery</li><li>Great for smaller weddings</li></ul></article><article class="package featured"><p class="tag">Most Popular</p><h3>Classic Photo</h3><div class="price">$2,400 <span>starting at</span></div><ul><li>Up to 8 hours coverage</li><li>Getting ready through reception</li><li>Family photo list support</li><li>Edited high-resolution gallery</li><li>Preview images after the wedding</li></ul></article><article class="package"><p class="tag">Full Day</p><h3>Signature Photo</h3><div class="price">$3,600 <span>starting at</span></div><ul><li>Up to 10 hours coverage</li><li>Second photographer included</li><li>Full-day story coverage</li><li>Edited high-resolution gallery</li><li>Engagement session add-on available</li></ul></article></div></div></section>
-    <section><div class="section-inner"><div class="section-head"><h2>Video packages.</h2><p>Wedding films that feel personal, not cheesy. Clean audio, emotional pacing, and finished edits that feel like your day.</p></div><div class="packages"><article class="package"><p class="tag">Highlight</p><h3>Essentials Video</h3><div class="price">$1,500 <span>starting at</span></div><ul><li>Up to 4 hours coverage</li><li>One-camera ceremony coverage</li><li>Short highlight film</li><li>Licensed music</li><li>Digital delivery</li></ul></article><article class="package featured"><p class="tag">Best Value</p><h3>Classic Video</h3><div class="price">$2,800 <span>starting at</span></div><ul><li>Up to 8 hours coverage</li><li>Highlight wedding film</li><li>Full ceremony edit</li><li>Clean vows and speeches</li><li>Reception moments</li></ul></article><article class="package"><p class="tag">Cinematic</p><h3>Signature Video</h3><div class="price">$4,200 <span>starting at</span></div><ul><li>Up to 10 hours coverage</li><li>Two-camera ceremony coverage</li><li>Highlight wedding film</li><li>Full ceremony and speeches edit</li><li>Drone add-on where permitted</li></ul></article></div></div></section>
-    <section class="locations"><div class="section-inner"><div class="section-head"><h2>Chicago weddings, city to suburbs.</h2><p>Serving Chicago, Jefferson Park, Park Ridge, Arlington Heights, Evanston, Oak Park, Glenview, Naperville, Winnetka, the North Shore, and surrounding suburbs.</p></div><div class="location-pills"><span>Chicago</span><span>Jefferson Park</span><span>Park Ridge</span><span>Arlington Heights</span><span>Evanston</span><span>Oak Park</span><span>Glenview</span><span>Naperville</span><span>Winnetka</span><span>North Shore</span></div></div></section>
-    <section id="faq" class="faq"><div class="section-inner"><div class="section-head"><h2>Quick answers.</h2><p>For couples comparing wedding photographers, videographers, and combined photo and video packages in Chicago.</p></div><div class="faq-list"><details open><summary>Do you offer wedding photography in Chicago?</summary><p>Yes. 1234 Weddings offers ceremony coverage, portraits, family photos, reception photos, details, and full online galleries.</p></details><details><summary>Do you offer wedding video too?</summary><p>Yes. Wedding video packages include highlight films, ceremony edits, speeches, vows, and reception coverage.</p></details><details><summary>Can we book photo and video together?</summary><p>Yes. You can book photography, video, or a combined package depending on the timeline and coverage you need.</p></details><details><summary>Can clients download photos from the gallery?</summary><p>Yes. The gallery page supports viewing, liking, selections, sharing, downloading selected images, and downloading the full gallery.</p></details></div></div></section>
-    <section id="contact" class="contact"><div class="section-inner contact-inner"><p class="eyebrow">Let’s talk dates</p><h2>Ready to book your wedding?</h2><p>Send your wedding date, venue, rough timeline, and whether you are looking for photography, video, or both.</p><div class="actions center"><a class="button" href="mailto:info@dhpixels.com?subject=Wedding%20Inquiry%20for%201234%20Weddings">Email info@dhpixels.com</a><a class="button secondary" href="tel:4175699708">Call 417.569.9708</a></div></div></section>
+
+    <section>
+      <div class="wrap">
+        <div class="feature">
+          <div class="feature-content">
+            <div class="kicker">Built for Chicago Weddings</div>
+            <h2>City grit. Family heart. Clean finish.</h2>
+            <p>From downtown rooftops and hotel ballrooms to neighborhood churches, backyard weddings, courthouse ceremonies, and packed dance floors, the goal is simple: make the day look as good as it felt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker">Video Pricing</div>
+            <h2>Wedding video coverage</h2>
+          </div>
+          <p class="lead">These are starting points so couples can understand the budget before reaching out. Final pricing depends on date, location, timeline, deliverables, and travel.</p>
+        </div>
+        <div class="grid three">
+          <article class="card price"><span class="tag">Highlight Coverage</span><h3>Wedding Highlight Film</h3><div class="amount">From $1,800</div><p class="small">Perfect for couples wanting cinematic wedding coverage without full documentary edits.</p><ul><li>Up to 4 hours coverage</li><li>Cinematic highlight film</li><li>Professional audio capture</li><li>Licensed music</li><li>Delivered online</li></ul></article>
+          <article class="card price featured"><span class="tag">Most Popular</span><h3>Wedding Film Coverage</h3><div class="amount">From $3,200</div><p class="small">Full wedding video coverage built for couples wanting the complete story.</p><ul><li>Up to 8 hours coverage</li><li>4 to 6 minute highlight film</li><li>Ceremony coverage</li><li>Professional audio recording</li><li>Drone footage when possible</li><li>Social media teaser</li></ul></article>
+          <article class="card price"><span class="tag">Full Documentary</span><h3>Wedding Film Collection</h3><div class="amount">From $5,500</div><p class="small">Documentary coverage focused on preserving the entire experience.</p><ul><li>Up to 10 hours coverage</li><li>Highlight film</li><li>Full ceremony edit</li><li>Full speeches edit</li><li>Drone footage when possible</li><li>Timeline planning assistance</li><li>Priority delivery</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">Gallery Preview</div><h2>Make it feel expensive.</h2></div>
+          <p class="lead">Swap these stock images with your real wedding work. Keep the layout. The SEO and structure are already built around Chicago wedding video coverage and photography.</p>
+        </div>
+        <div class="gallery" aria-label="Wedding photography gallery preview">
+          <div class="shot tall" style="background-image:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=85')"></div>
+          <div class="shot" style="background-image:url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=85')"></div>
+          <div class="shot tall" style="background-image:url('https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=85')"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="kicker">Questions Couples Ask</div><h2>Wedding FAQ</h2></div>
+          <p class="lead">Clear answers for couples, search engines, and AI answer engines.</p>
+        </div>
+        <div class="faq">
+          <details open><summary>Do you offer wedding video coverage?</summary><p>Yes. 1234 Weddings offers wedding video coverage, highlight films, ceremony edits, speeches edits, and combined photo and video coverage for Chicago and Chicagoland weddings.</p></details>
+          <details><summary>How much does wedding video coverage cost?</summary><p>Most packages range from $1,800 to $5,500 depending on the wedding date, hours of coverage, venue location, timeline, and deliverables.</p></details>
+          <details><summary>Do you shoot weddings outside Chicago?</summary><p>Yes. 1234 Weddings serves Chicago, the Chicago suburbs, and destination weddings when travel is available.</p></details>
+          <details><summary>What makes your wedding films different?</summary><p>The films are built around real emotion, clean audio, strong visuals, and natural pacing. The goal is cinematic without making the couple act fake or overly staged.</p></details>
+          <details><summary>How do we book our wedding date?</summary><p>Send your wedding date, venue, estimated timeline, and whether you want video, photo, or both. A signed agreement and retainer secures your date.</p></details>
+          <details><summary>Can you help us plan the video timeline?</summary><p>Yes. Timeline planning is part of the process. The goal is to protect the best light, ceremony audio, speeches, and enough breathing room so the day does not feel rushed.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <div class="kicker">Check Availability</div>
+          <h2>Tell us the date. We’ll tell you what’s possible.</h2>
+          <p class="lead">Send the wedding date, venue, city, and what you need captured. You can keep it simple. We’ll help shape the package from there.</p>
+          <form name="wedding-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+            <input type="hidden" name="form-name" value="wedding-inquiry" />
+            <p style="display:none"><label>Do not fill this out: <input name="bot-field" /></label></p>
+            <div class="form-grid"><input type="text" name="name" placeholder="Your name" required /><input type="email" name="email" placeholder="Email address" required /></div>
+            <div class="form-grid"><input type="tel" name="phone" placeholder="Phone number" /><input type="date" name="wedding-date" aria-label="Wedding date" /></div>
+            <div class="form-grid"><input type="text" name="venue" placeholder="Venue or city" /><select name="package-interest" aria-label="Package interest"><option value="">What are you looking for?</option><option>Video only</option><option>Photo + video</option><option>Photography only</option><option>Not sure yet</option></select></div>
+            <textarea name="message" placeholder="Tell us about the wedding, timing, location, and what matters most to you."></textarea>
+            <button class="btn gold" type="submit">Send Wedding Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><span>© 2026 1234 Weddings</span><span>Chicago wedding photography and wedding video by DHPixels.</span></footer>
+
+  <footer><div class="footer-inner"><div><strong>1234 Weddings</strong><br />Chicago wedding videography and photography</div><div><a href="mailto:info@dhpixels.com">info@dhpixels.com</a><br /><a href="tel:+14175699708">417-569-9708</a></div></div></footer>
+
+  <div class="contact-popover" id="contactBox" aria-hidden="true"><h3>Contact 1234 Weddings</h3><p>Questions about availability, video coverage, or wedding galleries? Reach out anytime.</p><div class="contact-actions"><a href="tel:+14175699708">Call Andrew <span>417-569-9708</span></a><a href="sms:+14175699708">Text Andrew <span>Start text</span></a><a href="mailto:info@dhpixels.com">Email <span>info@dhpixels.com</span></a></div></div>
+  <div class="contact-toggle"><button type="button" onclick="toggleContactBox()">Call / Text / Email</button></div>
+  <script>function toggleContactBox(){const box=document.getElementById('contactBox');const isOpen=box.classList.toggle('is-open');box.setAttribute('aria-hidden',String(!isOpen));}</script>
 </body>
 </html>
